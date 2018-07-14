@@ -8,27 +8,18 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SensorPage } from '../pages/sensor/sensor';
+import { SensorPageModule } from '../pages/sensor/sensor.module';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage,
-    ListPage
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-  ],
+  declarations: [MyApp, HomePage, ListPage],
+  imports: [BrowserModule, IonicModule.forRoot(MyApp), SensorPageModule],
   bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage,
-    ListPage
-  ],
+  entryComponents: [MyApp, HomePage, ListPage],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
 export class AppModule {}
