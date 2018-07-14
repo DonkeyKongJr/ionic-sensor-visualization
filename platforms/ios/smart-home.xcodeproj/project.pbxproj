@@ -438,6 +438,26 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				PRODUCT_NAME = "smart-home";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+				);
 			};
 			name = Debug;
 		};
@@ -460,6 +480,26 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				PRODUCT_NAME = "smart-home";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+					"\"smart-home/Plugins/cordova-plugin-firebase\"",
+				);
 			};
 			name = Release;
 		};
