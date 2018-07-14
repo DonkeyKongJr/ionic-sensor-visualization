@@ -50,6 +50,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sensor__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(467);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,17 +60,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var SensorPageModule = /** @class */ (function () {
     function SensorPageModule() {
     }
     SensorPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__sensor__["a" /* SensorPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sensor__["a" /* SensorPage */]),
-            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__sensor__["a" /* SensorPage */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sensor__["a" /* SensorPage */]), __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */]]
         })
     ], SensorPageModule);
     return SensorPageModule;
@@ -119,37 +117,26 @@ var SensorPage = /** @class */ (function () {
     SensorPage.prototype.loadData = function () {
         var _this = this;
         this.db
-            .collection('sensordata')
+            .collection('sensordata', function (ref) { return ref.orderBy('timestamp', 'desc'); })
             .valueChanges()
             .subscribe(function (data) {
             _this.fireSensorData = _this.convertTimestamp(data);
         });
     };
     SensorPage.prototype.convertTimestamp = function (sensordata) {
-        var _this = this;
         sensordata.forEach(function (_) {
-            _.timestamp = _.timestamp.toDate(_this.compareData);
+            _.timestamp = _.timestamp.toDate();
         });
         return sensordata;
     };
-    SensorPage.prototype.compareData = function (a, b) {
-        if (a < b) {
-            return -1;
-        }
-        if (a > b) {
-            return 1;
-        }
-        return 0;
-    };
     SensorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-sensor',template:/*ion-inline-start:"/Users/patrick/dev/ionic/smart-home/src/pages/sensor/sensor.html"*/'<!--\n  Generated template for the SensorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Sensor Data</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div *ngFor="let item of fireSensorData">\n    Temperature: {{item.temperature}}\n  </div>\n\n</ion-content>'/*ion-inline-end:"/Users/patrick/dev/ionic/smart-home/src/pages/sensor/sensor.html"*/
+            selector: 'page-sensor',template:/*ion-inline-start:"/Users/patrick/dev/ionic/smart-home/src/pages/sensor/sensor.html"*/'<!--\n  Generated template for the SensorPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Sensor Data</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div *ngFor="let item of fireSensorData">\n    <b>{{item.temperature | stringToNumber}}</b> °C and\n    <b>{{item.humidity | stringToNumber}}</b> % at {{item.timestamp | date: \'dd/MM/yyyy : hh:mm aa\'}}\n  </div>\n\n</ion-content>'/*ion-inline-end:"/Users/patrick/dev/ionic/smart-home/src/pages/sensor/sensor.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__node_modules_angularfire2_firestore__["a" /* AngularFirestore */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__node_modules_angularfire2_firestore__["a" /* AngularFirestore */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__node_modules_angularfire2_firestore__["a" /* AngularFirestore */]) === "function" && _c || Object])
     ], SensorPage);
     return SensorPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=sensor.js.map
@@ -252,9 +239,52 @@ var ListPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StringToNumberPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/**
+ * Generated class for the StringToNumberPipe pipe.
+ *
+ * See https://angular.io/api/core/Pipe for more info on Angular Pipes.
+ */
+var StringToNumberPipe = /** @class */ (function () {
+    function StringToNumberPipe() {
+    }
+    /**
+     * Takes a string and returns a toFixed(2) number.
+     */
+    StringToNumberPipe.prototype.transform = function (value) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        return new Number(value).toFixed(2);
+    };
+    StringToNumberPipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Pipe */])({
+            name: 'stringToNumber'
+        })
+    ], StringToNumberPipe);
+    return StringToNumberPipe;
+}());
+
+//# sourceMappingURL=string-to-number.js.map
+
+/***/ }),
+
+/***/ 277:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(277);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(400);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -262,7 +292,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 399:
+/***/ 400:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -270,21 +300,23 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(458);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(274);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(273);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_sensor_sensor_module__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__firebase_config__ = __webpack_require__(465);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__firebase_config__ = __webpack_require__(466);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2__ = __webpack_require__(228);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angularfire2_firestore__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pipes_pipes_module__ = __webpack_require__(467);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -310,6 +342,7 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/sensor/sensor.module#SensorPageModule', name: 'SensorPage', segment: 'sensor', priority: 'low', defaultHistory: [] }
                     ]
                 }),
+                __WEBPACK_IMPORTED_MODULE_12__pipes_pipes_module__["a" /* PipesModule */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_sensor_sensor_module__["SensorPageModule"],
                 __WEBPACK_IMPORTED_MODULE_10_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_9__firebase_config__["a" /* firebaseConfig */].firebase),
                 __WEBPACK_IMPORTED_MODULE_11_angularfire2_firestore__["b" /* AngularFirestoreModule */]
@@ -330,7 +363,7 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 457:
+/***/ 458:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -404,7 +437,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 465:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -421,7 +454,39 @@ var firebaseConfig = {
 };
 //# sourceMappingURL=firebase-config.js.map
 
+/***/ }),
+
+/***/ 467:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__string_to_number_string_to_number__ = __webpack_require__(276);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var PipesModule = /** @class */ (function () {
+    function PipesModule() {
+    }
+    PipesModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__string_to_number_string_to_number__["a" /* StringToNumberPipe */]],
+            imports: [],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__string_to_number_string_to_number__["a" /* StringToNumberPipe */]]
+        })
+    ], PipesModule);
+    return PipesModule;
+}());
+
+//# sourceMappingURL=pipes.module.js.map
+
 /***/ })
 
-},[276]);
+},[277]);
 //# sourceMappingURL=main.js.map

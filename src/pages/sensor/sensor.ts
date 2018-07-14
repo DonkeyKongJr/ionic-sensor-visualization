@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFirestore } from '../../../node_modules/angularfire2/firestore';
 import { FireSensorData } from '../../entities/fire-sensor-data.model';
+import { StringToNumberPipe } from '../../pipes/string-to-number/string-to-number';
 
 /**
  * Generated class for the SensorPage page.
@@ -31,7 +32,7 @@ export class SensorPage {
 
   private loadData() {
     this.db
-      .collection('sensordata')
+      .collection('sensordata', ref => ref.orderBy('timestamp', 'desc'))
       .valueChanges()
       .subscribe((data: FireSensorData[]) => {
         this.fireSensorData = this.convertTimestamp(data);
@@ -40,19 +41,9 @@ export class SensorPage {
 
   private convertTimestamp(sensordata: FireSensorData[]): FireSensorData[] {
     sensordata.forEach(_ => {
-      _.timestamp = _.timestamp.toDate(this.compareData);
+      _.timestamp = _.timestamp.toDate();
     });
 
     return sensordata;
-  }
-
-  private compareData(a, b) {
-    if (a < b) {
-      return -1;
-    }
-    if (a > b) {
-      return 1;
-    }
-    return 0;
   }
 }
