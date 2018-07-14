@@ -8,12 +8,20 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { SensorPage } from '../pages/sensor/sensor';
 import { SensorPageModule } from '../pages/sensor/sensor.module';
+import { firebaseConfig } from './firebase-config';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [MyApp, HomePage, ListPage],
-  imports: [BrowserModule, IonicModule.forRoot(MyApp), SensorPageModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
+    SensorPageModule,
+    AngularFireModule.initializeApp(firebaseConfig.firebase),
+    AngularFirestoreModule
+  ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, HomePage, ListPage],
   providers: [
