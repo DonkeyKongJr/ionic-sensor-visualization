@@ -31,32 +31,18 @@
             {
               "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"CDVIonicKeyboard\" /></feature>",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"FirebasePlugin\"><param name=\"ios-package\" value=\"FirebasePlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
             }
           ]
         }
       },
       "*/Entitlements-Debug.plist": {
         "parents": {
-          "aps-environment": [
-            {
-              "xml": "<string>development</string>",
-              "count": 1
-            }
-          ]
+          "aps-environment": []
         }
       },
       "*/Entitlements-Release.plist": {
         "parents": {
-          "aps-environment": [
-            {
-              "xml": "<string>production</string>",
-              "count": 1
-            }
-          ]
+          "aps-environment": []
         }
       }
     }
@@ -75,9 +61,6 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-ionic-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-firebase": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -114,14 +97,6 @@
       "clobbers": [
         "window.Keyboard"
       ]
-    },
-    {
-      "id": "cordova-plugin-firebase.FirebasePlugin",
-      "file": "plugins/cordova-plugin-firebase/www/firebase.js",
-      "pluginId": "cordova-plugin-firebase",
-      "clobbers": [
-        "FirebasePlugin"
-      ]
     }
   ],
   "plugin_metadata": {
@@ -129,7 +104,6 @@
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-ionic-webview": "1.1.19",
-    "cordova-plugin-ionic-keyboard": "2.0.5",
-    "cordova-plugin-firebase": "1.0.5"
+    "cordova-plugin-ionic-keyboard": "2.0.5"
   }
 }

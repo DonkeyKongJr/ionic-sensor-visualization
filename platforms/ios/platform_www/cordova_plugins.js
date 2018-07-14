@@ -31,14 +31,6 @@ module.exports = [
     "clobbers": [
       "window.Keyboard"
     ]
-  },
-  {
-    "id": "cordova-plugin-firebase.FirebasePlugin",
-    "file": "plugins/cordova-plugin-firebase/www/firebase.js",
-    "pluginId": "cordova-plugin-firebase",
-    "clobbers": [
-      "FirebasePlugin"
-    ]
   }
 ];
 module.exports.metadata = 
@@ -48,8 +40,7 @@ module.exports.metadata =
   "cordova-plugin-device": "2.0.2",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-ionic-webview": "1.1.19",
-  "cordova-plugin-ionic-keyboard": "2.0.5",
-  "cordova-plugin-firebase": "1.0.5"
+  "cordova-plugin-ionic-keyboard": "2.0.5"
 };
 // BOTTOM OF METADATA
 });
