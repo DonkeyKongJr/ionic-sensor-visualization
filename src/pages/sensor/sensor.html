@@ -15,7 +15,7 @@
 
 
 <ion-content padding>
-  <div *ngFor="let item of fireSensorData">
+  <div class="data-content" *ngFor="let item of fireSensorData">
     <b>{{item.temperature | stringToNumber}}</b> °C and
     <b>{{item.humidity | stringToNumber}}</b> % at {{item.timestamp | date: 'dd/MM/yyyy : hh:mm aa'}}
   </div>
