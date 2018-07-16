@@ -15,10 +15,10 @@
 <ion-content padding>
   <div *ngIf="afAuth.user | async as user; else showLogin">
     <h1>Hello {{ user.displayName }}!</h1>
-    <button (click)="logout()">Logout</button>
+    <button ion-button (click)="logout()">Logout</button>
   </div>
   <ng-template #showLogin>
-    <p>Please login.</p>
+    <p>Please login with one of the services below.</p>
     <button ion-button (click)="login()">Login with Google</button>
   </ng-template>
 </ion-content>
