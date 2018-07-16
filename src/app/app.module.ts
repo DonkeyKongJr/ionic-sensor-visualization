@@ -15,6 +15,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { StringToNumberPipe } from '../pipes/string-to-number/string-to-number';
 import { PipesModule } from '../pipes/pipes.module';
 import { LoginPageModule } from '../pages/login/login.module';
+import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';
 
 @NgModule({
   declarations: [MyApp, HomePage, ListPage],
@@ -25,7 +26,8 @@ import { LoginPageModule } from '../pages/login/login.module';
     SensorPageModule,
     LoginPageModule,
     AngularFireModule.initializeApp(firebaseConfig.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, HomePage, ListPage],
