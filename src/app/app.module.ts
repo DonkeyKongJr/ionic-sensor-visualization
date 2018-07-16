@@ -12,7 +12,6 @@ import { SensorPageModule } from '../pages/sensor/sensor.module';
 import { firebaseConfig } from './firebase-config';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { StringToNumberPipe } from '../pipes/string-to-number/string-to-number';
 import { PipesModule } from '../pipes/pipes.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';

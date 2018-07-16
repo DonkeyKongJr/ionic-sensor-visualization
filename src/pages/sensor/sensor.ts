@@ -22,8 +22,8 @@ export class SensorPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private readonly db: AngularFirestore,
-    public afAuth: AngularFireAuth
+    public afAuth: AngularFireAuth,
+    private readonly db: AngularFirestore
   ) {}
 
   ionViewDidLoad() {
