@@ -15,6 +15,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { PipesModule } from '../pipes/pipes.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';
+import { GooglePlus } from '@ionic-native/google-plus';
 
 @NgModule({
   declarations: [MyApp, HomePage, ListPage],
@@ -33,6 +34,7 @@ import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';
   providers: [
     StatusBar,
     SplashScreen,
+    GooglePlus,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
