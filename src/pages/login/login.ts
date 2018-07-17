@@ -1,18 +1,12 @@
 import { Component } from '@angular/core';
-import {
-  IonicPage,
-  NavController,
-  NavParams,
-  IonicModule
-} from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { auth } from 'firebase';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Platform } from 'ionic-angular';
-import { Observable } from 'rxjs/Observable';
+
 import { firebaseConfig } from '../../app/firebase-config';
 import * as firebase from 'firebase/app';
-import { from } from 'rxjs';
 import { HomePage } from '../home/home';
 import { SensorPage } from '../sensor/sensor';
 
