@@ -13,6 +13,8 @@ import { Observable } from 'rxjs/Observable';
 import { firebaseConfig } from '../../app/firebase-config';
 import * as firebase from 'firebase/app';
 import { from } from 'rxjs';
+import { HomePage } from '../home/home';
+import { SensorPage } from '../sensor/sensor';
 
 /**
  * Generated class for the LoginPage page.
@@ -27,8 +29,6 @@ import { from } from 'rxjs';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  user: Observable<firebase.User>;
-
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -43,16 +43,17 @@ export class LoginPage {
 
   public login() {
     if (this.platform.is('cordova')) {
-      this.user = from(this.nativeGoogleLogin());
+      this.nativeGoogleLogin();
     } else {
       this.webGoogleLogin();
     }
   }
   public logout() {
     this.afAuth.auth.signOut();
+    this.navCtrl.setRoot(HomePage);
   }
 
-  async nativeGoogleLogin(): Promise<firebase.User> {
+  async nativeGoogleLogin(): Promise<void> {
     try {
       const gplusUser = await this.gplus.login({
         webClientId: firebaseConfig.webClientId,
@@ -62,9 +63,10 @@ export class LoginPage {
 
       console.log('idToken: ' + gplusUser.idToken);
 
-      return await this.afAuth.auth.signInWithCredential(
+      await this.afAuth.auth.signInWithCredential(
         firebase.auth.GoogleAuthProvider.credential(gplusUser.idToken)
       );
+      this.navCtrl.setRoot(SensorPage);
     } catch (err) {
       console.log(err);
     }
@@ -74,6 +76,7 @@ export class LoginPage {
     try {
       const provider = new auth.GoogleAuthProvider();
       await this.afAuth.auth.signInWithPopup(provider);
+      this.navCtrl.setRoot(SensorPage);
     } catch (err) {
       console.log(err);
     }
