@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
+		02B4CEE71A6748FFA83EB0C6 /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0634CA9B89E64F9C9AB66BA3 /* GoogleAuthUtilities.framework */; };
+		07B9BFDE942C478780976124 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A12911D13546C4A63FFE26 /* CoreText.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2DC0545D19194674BD913B54 /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 16296862B98B463FA9F444B1 /* GCDWebServerFunctions.m */; };
@@ -16,10 +18,14 @@
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
 		346566A296A34DA1A38DBFC1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92008D67B14AD7AD82712D /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3551EA4EFE194F5EBB115B93 /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6850BEC122244BECB068B4A9 /* GCDWebServer.m */; };
+		3A7985AD61AA4E1183D54D13 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779AFA6AB6EB401FB8C62040 /* GoogleUtilities.framework */; };
+		4EB515F0FF8548E597A7C239 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A7E350116D4B50A8896DB4 /* GoogleSymbolUtilities.framework */; };
 		50D1CF19D2DF403DA9D3EA9D /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C24CA840C9B744DBA085259C /* GCDWebServerRequest.m */; };
+		53ECBF611B864978AD2F06B6 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = BECD5451A7BA474B880091DE /* GooglePlus.m */; };
 		5651487412154DC1AF4B1EC5 /* CDVIonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D50DF4F099714E3BB97AD1DA /* CDVIonicKeyboard.m */; };
 		668AC515E4E747288EC8C5B4 /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E46AB4110864BE49547F870 /* GCDWebServerFileResponse.m */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
+		6CBD30478F254788BD2F0DE0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F16792593CC4AE7933E94CE /* libz.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		70DCE1B250C24F7A900769AE /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E699B623E6C4C84B1F84B0C /* GCDWebServerConnection.m */; };
 		75D1457E6782400B8C443A29 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAD96D3029749B198084ADF /* CDVViewController+SplashScreen.m */; };
 		7A3755CDD93148ECB3657C2A /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE00761B4DC404996B9F39A /* GCDWebServerURLEncodedFormRequest.m */; };
@@ -28,14 +34,22 @@
 		8812A233A9DD4DC0BF4D9DF8 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 350D1C05E7E1445788CC820F /* CDVSplashScreen.m */; };
 		8FC1AAE0A2F343A4B0D7FC11 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A3184EB844652975E3DBC /* CDVDevice.m */; };
 		93A55CA4BCB44CE8AED3BA5B /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 346D620521F14FC4A3BE0CE5 /* GCDWebServerStreamedResponse.m */; };
+		9BB61DE606164940BD04EAE6 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AC57BA3043482C928D0F3B /* GoogleSignIn.framework */; };
 		9E193BCD67F04E0F86B4A161 /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1168326AA8E44138A7206AD4 /* GCDWebServerFileRequest.m */; };
 		A9DB741C3AB74AD1BF0EF3B6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A3974003634518B0E2F1A1 /* libz.tbd */; };
+		AC652525F646431E8217CB3D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CD645E05F3469284AED3F5 /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AD57F9C71E9C4A599FA408F2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B5C658C43E463FA6C9A420 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C438E16F38C94C97ACF0A163 /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BD9F5A72834A6B873C4BA2 /* GCDWebServerErrorResponse.m */; };
+		C852D63FDFFA4A8ABD4D5477 /* smart-home.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = E0D5B3A5B4B34AC3BE17C88E /* smart-home.entitlements */; };
 		CB6582F439DA42D3997DCF35 /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB843BCCD4E14C1C9C8724D3 /* GCDWebServerMultiPartFormRequest.m */; };
 		CE5AB4871D4142459AEFE8F7 /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E0862BE17F4D89836EDE1A /* GCDWebServerResponse.m */; };
+		D727413A7EA0459BBA6AFA15 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889373BAEF23405DA9828E62 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E26248FC313B46DCB267A347 /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E02A1F30FFCB474485FB7884 /* GCDWebServerDataRequest.m */; };
 		EC5979FA29B34966831C2888 /* CDVWKWebViewUIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B6AC0A5144E99B561EF11 /* CDVWKWebViewUIDelegate.m */; };
 		EC8CA215683A48BA8FC0C8F8 /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AF501C6A744A2296A73F6D /* GCDWebServerDataResponse.m */; };
+		ED835BF3D50D400D85E62D32 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1583B20DB84241E481A988D7 /* SafariServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F144D607BEF84B398B44F57D /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE53B38085664653B78328AD /* GoogleAppUtilities.framework */; };
+		F796787CBDE64A71996DDCC4 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACD6BE8629748A0B36994A4 /* GoogleNetworkingUtilities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +78,12 @@
 
 /* Begin PBXFileReference section */
 		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "smart-home/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		0634CA9B89E64F9C9AB66BA3 /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = "smart-home/Plugins/cordova-plugin-googleplus/GoogleAuthUtilities.framework"; sourceTree = "<group>"; };
+		09CD645E05F3469284AED3F5 /* AddressBook.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		0C5D110055C84BFD8233F635 /* CDVWKWebViewEngine.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVWKWebViewEngine.m; path = "cordova-plugin-ionic-webview/CDVWKWebViewEngine.m"; sourceTree = "<group>"; };
 		1168326AA8E44138A7206AD4 /* GCDWebServerFileRequest.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFileRequest.m; path = "cordova-plugin-ionic-webview/GCDWebServerFileRequest.m"; sourceTree = "<group>"; };
 		14624F47040D4611B9329000 /* CDVIonicKeyboard.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVIonicKeyboard.h; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.h"; sourceTree = "<group>"; };
+		1583B20DB84241E481A988D7 /* SafariServices.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		16296862B98B463FA9F444B1 /* GCDWebServerFunctions.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFunctions.m; path = "cordova-plugin-ionic-webview/GCDWebServerFunctions.m"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +108,7 @@
 		3DD381EC276D41C6A0B8C1EC /* CDVWKWebViewEngine.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVWKWebViewEngine.h; path = "cordova-plugin-ionic-webview/CDVWKWebViewEngine.h"; sourceTree = "<group>"; };
 		425AA7FCFDFB4D6595D1D569 /* CDVDevice.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; };
 		46EB8D510C4844E69A5E47B0 /* GCDWebServerConnection.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServerConnection.h; path = "cordova-plugin-ionic-webview/GCDWebServerConnection.h"; sourceTree = "<group>"; };
+		47AC57BA3043482C928D0F3B /* GoogleSignIn.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = "smart-home/Plugins/cordova-plugin-googleplus/GoogleSignIn.framework"; sourceTree = "<group>"; };
 		4A5286546D904E73BADE7568 /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServerStreamedResponse.h; path = "cordova-plugin-ionic-webview/GCDWebServerStreamedResponse.h"; sourceTree = "<group>"; };
 		4E46AB4110864BE49547F870 /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFileResponse.m; path = "cordova-plugin-ionic-webview/GCDWebServerFileResponse.m"; sourceTree = "<group>"; };
 		4E699B623E6C4C84B1F84B0C /* GCDWebServerConnection.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerConnection.m; path = "cordova-plugin-ionic-webview/GCDWebServerConnection.m"; sourceTree = "<group>"; };
@@ -107,20 +125,31 @@
 		6E5A3184EB844652975E3DBC /* CDVDevice.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVDevice.m; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; };
 		7467F3C6ED6D4341BB574ED2 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; };
 		75143AA0EBE6431E93A5CB12 /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFunctions.h; path = "cordova-plugin-ionic-webview/GCDWebServerFunctions.h"; sourceTree = "<group>"; };
+		779AFA6AB6EB401FB8C62040 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = "smart-home/Plugins/cordova-plugin-googleplus/GoogleUtilities.framework"; sourceTree = "<group>"; };
 		78670E2922BB41188B212D06 /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServerPrivate.h; path = "cordova-plugin-ionic-webview/GCDWebServerPrivate.h"; sourceTree = "<group>"; };
+		78A7E350116D4B50A8896DB4 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = "smart-home/Plugins/cordova-plugin-googleplus/GoogleSymbolUtilities.framework"; sourceTree = "<group>"; };
+		7ACD6BE8629748A0B36994A4 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = "smart-home/Plugins/cordova-plugin-googleplus/GoogleNetworkingUtilities.framework"; sourceTree = "<group>"; };
 		8559A46DBEDE47E690F0C3B1 /* CDVSplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; };
+		87A12911D13546C4A63FFE26 /* CoreText.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		889373BAEF23405DA9828E62 /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* smart-home-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "smart-home-Info.plist"; path = "smart-home/smart-home-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
+		8F16792593CC4AE7933E94CE /* libz.dylib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A4A3974003634518B0E2F1A1 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B12B6AC0A5144E99B561EF11 /* CDVWKWebViewUIDelegate.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVWKWebViewUIDelegate.m; path = "cordova-plugin-ionic-webview/CDVWKWebViewUIDelegate.m"; sourceTree = "<group>"; };
+		B80D2A3CC2814C62BB46E0AF /* GooglePlus.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GooglePlus.h; path = "cordova-plugin-googleplus/GooglePlus.h"; sourceTree = "<group>"; };
+		BECD5451A7BA474B880091DE /* GooglePlus.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GooglePlus.m; path = "cordova-plugin-googleplus/GooglePlus.m"; sourceTree = "<group>"; };
 		C089A1C46A7C4192BA74A6F2 /* GCDWebServerDataRequest.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataRequest.h; path = "cordova-plugin-ionic-webview/GCDWebServerDataRequest.h"; sourceTree = "<group>"; };
 		C24CA840C9B744DBA085259C /* GCDWebServerRequest.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerRequest.m; path = "cordova-plugin-ionic-webview/GCDWebServerRequest.m"; sourceTree = "<group>"; };
 		C8286CFE5D2D4E3D83CCA5F6 /* GCDWebServerFileRequest.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileRequest.h; path = "cordova-plugin-ionic-webview/GCDWebServerFileRequest.h"; sourceTree = "<group>"; };
 		CBC27EF3B034497DAED1F3EA /* GCDWebServer.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServer.h; path = "cordova-plugin-ionic-webview/GCDWebServer.h"; sourceTree = "<group>"; };
+		CE53B38085664653B78328AD /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = "smart-home/Plugins/cordova-plugin-googleplus/GoogleAppUtilities.framework"; sourceTree = "<group>"; };
 		CFAD96D3029749B198084ADF /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; };
 		D50DF4F099714E3BB97AD1DA /* CDVIonicKeyboard.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVIonicKeyboard.m; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.m"; sourceTree = "<group>"; };
 		D5E0862BE17F4D89836EDE1A /* GCDWebServerResponse.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerResponse.m; path = "cordova-plugin-ionic-webview/GCDWebServerResponse.m"; sourceTree = "<group>"; };
 		DEDF76B4647946B698C39B9B /* GCDWebServerResponse.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServerResponse.h; path = "cordova-plugin-ionic-webview/GCDWebServerResponse.h"; sourceTree = "<group>"; };
 		E02A1F30FFCB474485FB7884 /* GCDWebServerDataRequest.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerDataRequest.m; path = "cordova-plugin-ionic-webview/GCDWebServerDataRequest.m"; sourceTree = "<group>"; };
+		E0D5B3A5B4B34AC3BE17C88E /* smart-home.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; path = "smart-home.entitlements"; sourceTree = "<group>"; };
+		E8B5C658C43E463FA6C9A420 /* Security.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EB843BCCD4E14C1C9C8724D3 /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerMultiPartFormRequest.m; path = "cordova-plugin-ionic-webview/GCDWebServerMultiPartFormRequest.m"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
@@ -137,6 +166,18 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				346566A296A34DA1A38DBFC1 /* WebKit.framework in Frameworks */,
 				A9DB741C3AB74AD1BF0EF3B6 /* libz.tbd in Frameworks */,
+				F144D607BEF84B398B44F57D /* GoogleAppUtilities.framework in Frameworks */,
+				02B4CEE71A6748FFA83EB0C6 /* GoogleAuthUtilities.framework in Frameworks */,
+				F796787CBDE64A71996DDCC4 /* GoogleNetworkingUtilities.framework in Frameworks */,
+				9BB61DE606164940BD04EAE6 /* GoogleSignIn.framework in Frameworks */,
+				4EB515F0FF8548E597A7C239 /* GoogleSymbolUtilities.framework in Frameworks */,
+				3A7985AD61AA4E1183D54D13 /* GoogleUtilities.framework in Frameworks */,
+				AC652525F646431E8217CB3D /* AddressBook.framework in Frameworks */,
+				07B9BFDE942C478780976124 /* CoreText.framework in Frameworks */,
+				ED835BF3D50D400D85E62D32 /* SafariServices.framework in Frameworks */,
+				AD57F9C71E9C4A599FA408F2 /* Security.framework in Frameworks */,
+				D727413A7EA0459BBA6AFA15 /* SystemConfiguration.framework in Frameworks */,
+				6CBD30478F254788BD2F0DE0 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +240,7 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* smart-home-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+				E0D5B3A5B4B34AC3BE17C88E /* smart-home.entitlements */,
 			);
 			name = Resources;
 			path = "smart-home/Resources";
@@ -209,6 +251,18 @@
 			children = (
 				2D92008D67B14AD7AD82712D /* WebKit.framework */,
 				A4A3974003634518B0E2F1A1 /* libz.tbd */,
+				CE53B38085664653B78328AD /* GoogleAppUtilities.framework */,
+				0634CA9B89E64F9C9AB66BA3 /* GoogleAuthUtilities.framework */,
+				7ACD6BE8629748A0B36994A4 /* GoogleNetworkingUtilities.framework */,
+				47AC57BA3043482C928D0F3B /* GoogleSignIn.framework */,
+				78A7E350116D4B50A8896DB4 /* GoogleSymbolUtilities.framework */,
+				779AFA6AB6EB401FB8C62040 /* GoogleUtilities.framework */,
+				09CD645E05F3469284AED3F5 /* AddressBook.framework */,
+				87A12911D13546C4A63FFE26 /* CoreText.framework */,
+				1583B20DB84241E481A988D7 /* SafariServices.framework */,
+				E8B5C658C43E463FA6C9A420 /* Security.framework */,
+				889373BAEF23405DA9828E62 /* SystemConfiguration.framework */,
+				8F16792593CC4AE7933E94CE /* libz.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,6 +331,8 @@
 				CFAD96D3029749B198084ADF /* CDVViewController+SplashScreen.m */,
 				8559A46DBEDE47E690F0C3B1 /* CDVSplashScreen.h */,
 				7467F3C6ED6D4341BB574ED2 /* CDVViewController+SplashScreen.h */,
+				BECD5451A7BA474B880091DE /* GooglePlus.m */,
+				B80D2A3CC2814C62BB46E0AF /* GooglePlus.h */,
 			);
 			name = Plugins;
 			path = "smart-home/Plugins";
@@ -373,6 +429,7 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				C852D63FDFFA4A8ABD4D5477 /* smart-home.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +481,7 @@
 				93A55CA4BCB44CE8AED3BA5B /* GCDWebServerStreamedResponse.m in Sources */,
 				8812A233A9DD4DC0BF4D9DF8 /* CDVSplashScreen.m in Sources */,
 				75D1457E6782400B8C443A29 /* CDVViewController+SplashScreen.m in Sources */,
+				53ECBF611B864978AD2F06B6 /* GooglePlus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,8 +505,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "smart-home/Resources/smart-home.entitlements";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = A286MK2PD5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -458,7 +526,7 @@
 				INFOPLIST_FILE = "smart-home/smart-home-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "at.psc.ionic.smart-home";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.psc.sensor-data-at.psc.sensor-data-";
 				PRODUCT_NAME = "smart-home";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,8 +541,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "smart-home/Resources/smart-home.entitlements";
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = A286MK2PD5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+					"\"smart-home/Plugins/cordova-plugin-googleplus\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "smart-home/smart-home-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
@@ -482,7 +560,7 @@
 				INFOPLIST_FILE = "smart-home/smart-home-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "at.psc.ionic.smart-home";
+				PRODUCT_BUNDLE_IDENTIFIER = "at.psc.sensor-data-at.psc.sensor-data-";
 				PRODUCT_NAME = "smart-home";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -500,6 +578,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "smart-home/Resources/smart-home.entitlements";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
@@ -526,6 +605,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "smart-home/Resources/smart-home.entitlements";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
