@@ -16,6 +16,8 @@ import { PipesModule } from '../pipes/pipes.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';
 import { GooglePlus } from '@ionic-native/google-plus';
+import { ChartPageModule } from '../pages/chart/chart.module';
+import { SensorDataProvider } from '../providers/sensor-data/sensor-data';
 
 @NgModule({
   declarations: [MyApp, HomePage, ListPage],
@@ -27,7 +29,8 @@ import { GooglePlus } from '@ionic-native/google-plus';
     LoginPageModule,
     AngularFireModule.initializeApp(firebaseConfig.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ChartPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, HomePage, ListPage],
@@ -35,7 +38,8 @@ import { GooglePlus } from '@ionic-native/google-plus';
     StatusBar,
     SplashScreen,
     GooglePlus,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    SensorDataProvider
   ]
 })
 export class AppModule {}
