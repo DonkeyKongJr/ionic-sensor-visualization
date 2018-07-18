@@ -11,3 +11,6 @@ Side Menu:
 Result List View:
 
 ![alt text](https://raw.githubusercontent.com/DonkeyKongJr/ionic-sensor-visualization/master/screenshots/ios/result-list-view.png)
+
+Chart view (Landscape Orientation) of temperature values:
+![alt text](https://raw.githubusercontent.com/DonkeyKongJr/ionic-sensor-visualization/master/screenshots/ios/charting-temperature.png)

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFirestore } from '../../../node_modules/angularfire2/firestore';
 import { FireSensorData } from '../../entities/fire-sensor-data.model';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { SensorDataProvider } from '../../providers/sensor-data/sensor-data';
 
 /**
  * Generated class for the SensorPage page.
@@ -23,7 +24,8 @@ export class SensorPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public afAuth: AngularFireAuth,
-    private readonly db: AngularFirestore
+    private readonly db: AngularFirestore,
+    private readonly sensorDataProvider: SensorDataProvider
   ) {}
 
   ionViewDidLoad() {
@@ -48,15 +50,7 @@ export class SensorPage {
       .collection('sensordata', ref => ref.orderBy('timestamp', 'desc'))
       .valueChanges()
       .subscribe((data: FireSensorData[]) => {
-        this.fireSensorData = this.convertTimestamp(data);
+        this.fireSensorData = this.sensorDataProvider.convertTimestamp(data);
       });
-  }
-
-  private convertTimestamp(sensordata: FireSensorData[]): FireSensorData[] {
-    sensordata.forEach(_ => {
-      _.timestamp = _.timestamp.toDate();
-    });
-
-    return sensordata;
   }
 }
