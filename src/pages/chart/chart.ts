@@ -58,21 +58,6 @@ export class ChartPage {
             spanGaps: false
           }
         ]
-      },
-      options: {
-        scales: {
-          yAxes: [
-            {
-              display: true,
-              ticks: {
-                beginAtZero: true,
-                steps: 10,
-                stepValue: 5,
-                max: 35
-              }
-            }
-          ]
-        }
       }
     });
     this.loadData();
