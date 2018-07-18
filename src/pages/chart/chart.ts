@@ -58,6 +58,21 @@ export class ChartPage {
             spanGaps: false
           }
         ]
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              display: true,
+              ticks: {
+                beginAtZero: true,
+                steps: 10,
+                stepValue: 5,
+                max: 35
+              }
+            }
+          ]
+        }
       }
     });
     this.loadData();
@@ -86,7 +101,8 @@ export class ChartPage {
 
   private addDataToChart(fireSensorData: FireSensorData[]) {
     fireSensorData.forEach(data => {
-      this.lineChart.config.data.labels.push(data.timestamp);
+      var date = data.timestamp as Date;
+      this.lineChart.config.data.labels.push(date.toDateString());
       this.lineChart.config.data.datasets[0].data.push(data.temperature);
     });
 
