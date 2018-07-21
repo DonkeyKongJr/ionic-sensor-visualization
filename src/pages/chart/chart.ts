@@ -19,8 +19,10 @@ import { SensorDataProvider } from '../../providers/sensor-data/sensor-data';
   templateUrl: 'chart.html'
 })
 export class ChartPage {
-  @ViewChild('lineCanvas') lineCanvas;
-  lineChart: any;
+  @ViewChild('temperatureCanvas') temperatureCanvas;
+  @ViewChild('humidityCanvas') humidityCanvas;
+  temperatureLineChart: any;
+  humidotyLineChart: any;
 
   constructor(
     public navCtrl: NavController,
@@ -32,34 +34,8 @@ export class ChartPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChartPage');
-    this.lineChart = new Chart(this.lineCanvas.nativeElement, {
-      type: 'line',
-      data: {
-        datasets: [
-          {
-            label: 'Temperature',
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: 'rgba(75,192,192,0.4)',
-            borderColor: 'rgba(75,192,192,1)',
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: 'rgba(75,192,192,1)',
-            pointBackgroundColor: '#fff',
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-            pointHoverBorderColor: 'rgba(220,220,220,1)',
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            spanGaps: false
-          }
-        ]
-      }
-    });
+    this.initializeTemperatureLineChart();
+    this.initializeHumidityLineChart();
     this.loadData();
   }
 
@@ -85,12 +61,84 @@ export class ChartPage {
   }
 
   private addDataToChart(fireSensorData: FireSensorData[]) {
+    let dates: string[] = [];
     fireSensorData.forEach(data => {
-      var date = data.timestamp as Date;
-      this.lineChart.config.data.labels.push(date.toDateString());
-      this.lineChart.config.data.datasets[0].data.push(data.temperature);
+      dates.push((data.timestamp as Date).toLocaleDateString());
+      this.temperatureLineChart.config.data.datasets[0].data.push(
+        data.temperature
+      );
+      this.humidotyLineChart.config.data.datasets[0].data.push(data.humidity);
     });
 
-    this.lineChart.update();
+    this.temperatureLineChart.config.data.labels = dates;
+    this.humidotyLineChart.config.data.labels = dates;
+
+    this.temperatureLineChart.update();
+    this.humidotyLineChart.update();
+  }
+
+  private initializeTemperatureLineChart() {
+    this.temperatureLineChart = new Chart(
+      this.temperatureCanvas.nativeElement,
+      {
+        type: 'line',
+        data: {
+          datasets: [
+            {
+              label: 'Temperature',
+              fill: false,
+              lineTension: 0.1,
+              backgroundColor: 'rgba(75,192,192,0.4)',
+              borderColor: 'rgba(75,192,192,1)',
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: 'rgba(75,192,192,1)',
+              pointBackgroundColor: '#fff',
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+              pointHoverBorderColor: 'rgba(220,220,220,1)',
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10,
+              spanGaps: false
+            }
+          ]
+        }
+      }
+    );
+  }
+
+  private initializeHumidityLineChart() {
+    this.humidotyLineChart = new Chart(this.humidityCanvas.nativeElement, {
+      type: 'line',
+      data: {
+        datasets: [
+          {
+            label: 'Humidity',
+            fill: false,
+            lineTension: 0.1,
+            backgroundColor: 'rgba(75,192,192,0.4)',
+            borderColor: 'rgba(75,192,192,1)',
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: 'rgba(75,192,192,1)',
+            pointBackgroundColor: '#fff',
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+            pointHoverBorderColor: 'rgba(220,220,220,1)',
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            spanGaps: false
+          }
+        ]
+      }
+    });
   }
 }
