@@ -61,9 +61,9 @@ export class ChartPage {
   }
 
   private addDataToChart(fireSensorData: FireSensorData[]) {
-    let dates: Date[] = [];
+    let dates: string[] = [];
     fireSensorData.forEach(data => {
-      dates.push(data.timestamp as Date);
+      dates.push((data.timestamp as Date).toLocaleDateString());
       this.temperatureLineChart.config.data.datasets[0].data.push(
         data.temperature
       );
