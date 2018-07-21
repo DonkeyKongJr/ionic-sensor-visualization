@@ -6,5 +6,6 @@ export const firebaseConfig = {
     projectId: '<your-project-id>',
     storageBucket: '<your-storage-bucket>',
     messagingSenderId: '<your-messaging-sender-id>'
-  }
+  },
+  webClientId: ''
 };
