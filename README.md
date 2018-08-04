@@ -1,6 +1,6 @@
 # ionic-sensor-visualization
 
-![alt text](https://travis-ci.com/DonkeyKongJr/ionic-sensor-visualization.svg?branch=master)
+[![Build Status](https://www.travis-ci.org/DonkeyKongJr/ionic-sensor-visualization.svg?branch=master)](https://www.travis-ci.org/DonkeyKongJr/ionic-sensor-visualization)
 
 A tiny web, iOS and Android Application which shows sensor data provided via a Firesstore Collection.
 
