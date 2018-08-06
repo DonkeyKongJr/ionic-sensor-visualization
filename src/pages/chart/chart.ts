@@ -53,9 +53,12 @@ export class ChartPage {
 
   private loadData() {
     this.db
-      .collection('sensordata', ref => ref.orderBy('timestamp', 'asc'))
+      .collection('sensordata', ref =>
+        ref.orderBy('timestamp', 'desc').limit(960)
+      )
       .valueChanges()
       .subscribe((data: FireSensorData[]) => {
+        data = data.reverse();
         this.addDataToChart(this.sensorDataProvider.convertTimestamp(data));
       });
   }
