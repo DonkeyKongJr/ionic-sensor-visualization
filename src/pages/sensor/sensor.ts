@@ -47,7 +47,9 @@ export class SensorPage {
 
   private loadData() {
     this.db
-      .collection('sensordata', ref => ref.orderBy('timestamp', 'desc'))
+      .collection('sensordata', ref =>
+        ref.orderBy('timestamp', 'desc').limit(960)
+      )
       .valueChanges()
       .subscribe((data: FireSensorData[]) => {
         this.fireSensorData = this.sensorDataProvider.convertTimestamp(data);
